@@ -1,3 +1,4 @@
+import sys, ast
 def SortedList(List):
     for i in range(0, len(List)):
         for j in range(i, len(List)):
@@ -7,5 +8,5 @@ def SortedList(List):
 		List[j] = temp
     return List
 
-List=[1,3,5,2,4]
+List = ast.literal_eval( sys.argv[1] )
 print SortedList(List) 
