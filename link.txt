@@ -1,1 +1,5 @@
-https://techietweak.wordpress.com/2015/03/30/http-restful-api-with-python-requests-library/
+https://techietweak.wordpress.com/2015/03/30/http-restful-api-with-python-requests-library
+
+http://www.bogotobogo.com/python/python-REST-API-Http-Requests-for-Humans-with-Flask.php/
+
+https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
