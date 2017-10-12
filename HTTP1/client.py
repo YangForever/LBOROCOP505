@@ -11,21 +11,21 @@ class Client(object):
         self.session = requests.session()
 
     def ShowInfo(self):
-        r = self.session.get("http://127.0.0.1:5000/todo/api/v1.0/tasks", headers=headers)
+        r = self.session.get("http://158.125.165.2:5000/todo/api/v1.0/tasks", headers=headers)
         print r.text
 
     def ShowItem(self, id):
-        r = self.session.get("http://127.0.0.1:5000/todo/api/v1.0/tasks/" + str(id), headers=headers)
+        r = self.session.get("http://158.125.165.2:5000/todo/api/v1.0/tasks/" + str(id), headers=headers)
         print r.text
 
     def CreateItem(self, item):
-        r = self.session.post("http://127.0.0.1:5000/todo/api/v1.0/tasks", data=item, headers=headers)
+        r = self.session.post("http://158.125.165.2:5000/todo/api/v1.0/tasks", data=item, headers=headers)
     
     def ModifyItem(self, id, item):
-        r = self.session.put("http://127.0.0.1:5000/todo/api/v1.0/tasks/" + str(id), data=item, headers=headers)
+        r = self.session.put("http://158.125.165.2:5000/todo/api/v1.0/tasks/" + str(id), data=item, headers=headers)
     
     def DeleteItem(self, id):
-        r = self.session.delete("http://127.0.0.1:5000/todo/api/v1.0/tasks/" + str(id), headers=headers)
+        r = self.session.delete("http://158.125.165.2:5000/todo/api/v1.0/tasks/" + str(id), headers=headers)
 
 if __name__ == "__main__":
     c = Client()
@@ -34,7 +34,6 @@ if __name__ == "__main__":
     
     print "show id == 1"
     c.ShowItem(1)
-    
     print "create new item"
     data = {"title":"Python class", "description":"Easy"}
     data = json.dumps(data)
